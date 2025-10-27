@@ -95,13 +95,16 @@ jobs:
                   base: ""
                   template: classic
                   plugin_habits: yes
-                  plugin_habits_from: 200 # Use 200 events to ensure enough data
+                  plugin_habits_from: 1000 # Increase events to capture more data
                   plugin_habits_days: 365 # Look back a full year for more data
                   plugin_habits_facts: no # Disable facts computation to avoid errors
                   plugin_habits_charts: yes # Display charts section
+                  plugin_habits_charts_type: classic # Use classic chart type
                   plugin_habits_trim: yes # Trim unused hours on daily chart
                   plugin_habits_languages_limit: 8 # Limit languages to avoid processing errors
                   plugin_habits_languages_threshold: 0% # Include all languages
+                  repositories_skipped: github-actions # Skip automated repositories
+                  users_ignored: github-actions[bot],dependabot[bot],dependabot-preview[bot] # Ignore bots
 
     issue_pr_lang:
         runs-on: ubuntu-latest
