@@ -95,11 +95,13 @@ jobs:
                   base: ""
                   template: classic
                   plugin_habits: yes
-                  plugin_habits_from: 50 # Use 50 events to compute habits (reduced from 200)
-                  plugin_habits_days: 90 # Keep events from last 90 days (increased from 14)
+                  plugin_habits_from: 200 # Use 200 events to ensure enough data
+                  plugin_habits_days: 365 # Look back a full year for more data
                   plugin_habits_facts: no # Disable facts computation to avoid errors
                   plugin_habits_charts: yes # Display charts section
                   plugin_habits_trim: yes # Trim unused hours on daily chart
+                  plugin_habits_languages_limit: 8 # Limit languages to avoid processing errors
+                  plugin_habits_languages_threshold: 0% # Include all languages
 
     issue_pr_lang:
         runs-on: ubuntu-latest
