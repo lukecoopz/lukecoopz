@@ -94,6 +94,7 @@ jobs:
                   user: lukecoopz
                   base: ""
                   template: classic
+                  repositories_affiliations: owner, collaborator, organization_member # Include org repos!
                   plugin_habits: yes
                   plugin_habits_from: 1000 # Increase events to capture more data
                   plugin_habits_days: 365 # Look back a full year for more data
