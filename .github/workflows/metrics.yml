@@ -2,10 +2,14 @@ name: Metrics
 on:
     workflow_dispatch:
 
+permissions:
+    contents: write
+
 jobs:
     achievements:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v4
             - uses: gh-metrics/metrics@master
               with:
                   filename: achievements.svg
@@ -21,6 +25,7 @@ jobs:
     github-metrics:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v4
             - uses: lowlighter/metrics@latest
               with:
                   filename: header.svg
@@ -37,6 +42,7 @@ jobs:
     lines:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v4
             - uses: lowlighter/metrics@latest
               with:
                   filename: lines-of-code.svg
@@ -48,6 +54,7 @@ jobs:
     acti_comm:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v4
             - uses: lowlighter/metrics@latest
               with:
                   filename: acti_comm.svg
@@ -65,6 +72,7 @@ jobs:
     iso_calender:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v4
             - uses: lowlighter/metrics@latest
               with:
                   filename: iso_calender.svg
@@ -84,6 +92,7 @@ jobs:
     habits:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v4
             - uses: lowlighter/metrics@latest
               with:
                   filename: github-habits.svg
@@ -103,6 +112,7 @@ jobs:
     issue_pr_lang:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v4
             - uses: lowlighter/metrics@latest
               with:
                   filename: issue_pr_lang.svg
@@ -122,6 +132,7 @@ jobs:
     repositories:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v4
             - uses: lowlighter/metrics@latest
               with:
                   filename: repositories.svg
